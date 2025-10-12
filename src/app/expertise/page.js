@@ -114,7 +114,7 @@ export default function ExpertisePage() {
               
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/public/images/pages/expertise/Florent.jpg" 
+                  src="/images/pages/expertise/Florent.jpg" 
                   alt="Approche personnalisée"
                   className="w-full h-full object-cover hover:scale-105 transition duration-500"
                 />
