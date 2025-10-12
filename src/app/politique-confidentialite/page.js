@@ -165,7 +165,7 @@ export default function PolitiqueConfidentialitePage() {
                   <strong>Wealthcome Pro</strong> - CRM et gestion de la relation client (conformité RGPD)
                 </li>
                 <li>
-                  <strong>Outil d'analyse</strong> - Statistiques de fréquentation du site (données anonymisées)
+                  <strong>Plausible Analytics</strong> - Statistiques de fréquentation du site (données anonymisées, sans cookies, conforme RGPD)
                 </li>
               </ul>
               <p className="text-slate-700 mt-4 bg-slate-50 p-4 rounded">
@@ -308,27 +308,52 @@ export default function PolitiqueConfidentialitePage() {
           <div className="mb-12">
             <div className="flex items-center mb-4">
               <FileText className="w-6 h-6 text-amber-600 mr-3" />
-              <h2 className="text-2xl font-bold text-slate-900">8. Cookies et traceurs</h2>
+              <h2 className="text-2xl font-bold text-slate-900">8. Statistiques anonymes et respect de votre vie privée</h2>
             </div>
             <div className="bg-white p-6 rounded-lg border border-slate-200">
-              <p className="text-slate-700 mb-4">
-                Notre site utilise des cookies pour améliorer votre expérience de navigation et analyser notre trafic.
-              </p>
-              
-              <h3 className="font-bold text-slate-900 mb-3">Cookies utilisés :</h3>
-              <ul className="space-y-3 text-slate-700">
-                <li>
-                  <strong>Cookies analytiques :</strong> Pour mesurer l'audience et améliorer le site (données anonymisées)
-                </li>
-                <li>
-                  <strong>Cookies fonctionnels :</strong> Pour le bon fonctionnement du site (stockage des préférences)
-                </li>
+              <div className="bg-green-50 border-l-4 border-green-500 p-4 mb-6 rounded-r-lg">
+                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
+                  <Shield className="w-5 h-5 mr-2 text-green-600" />
+                  Analyse respectueuse de la vie privée
+                </h3>
+                <p className="text-slate-700">
+                  Nous utilisons <strong>Plausible Analytics</strong>, un outil d'analyse web respectueux de la vie privée, 
+                  pour comprendre comment notre site est utilisé et l'améliorer.
+                </p>
+              </div>
+
+              <h3 className="font-bold text-slate-900 mb-3">Pourquoi Plausible ne nécessite pas votre consentement :</h3>
+              <ul className="space-y-2 text-slate-700 mb-6">
+                <li>• <strong>Aucun cookie utilisé</strong> : Plausible ne dépose aucun cookie sur votre appareil</li>
+                <li>• <strong>Aucune donnée personnelle collectée</strong> : Pas de suivi individuel, pas d'identification</li>
+                <li>• <strong>Données 100% anonymisées</strong> : Impossible de vous identifier ou de vous suivre</li>
+                <li>• <strong>Aucun suivi entre sites</strong> : Vos déplacements sur le web ne sont pas tracés</li>
+                <li>• <strong>Conforme RGPD par défaut</strong> : Hébergé en Union Européenne</li>
+                <li>• <strong>Données non revendues</strong> : Vos informations ne sont jamais partagées ou vendues</li>
               </ul>
 
-              <div className="mt-4 bg-slate-50 p-4 rounded">
-                <p className="text-slate-700 mb-2">
-                  <strong>Durée de conservation :</strong> 13 mois maximum
+              <h3 className="font-bold text-slate-900 mb-3">Ce que nous mesurons (de manière anonyme) :</h3>
+              <ul className="space-y-2 text-slate-700 mb-6">
+                <li>• Pages visitées et durée des visites</li>
+                <li>• Provenance du trafic (moteur de recherche, lien direct, etc.)</li>
+                <li>• Type d'appareil utilisé (ordinateur, mobile, tablette)</li>
+                <li>• Pays et région (sans identification précise)</li>
+              </ul>
+
+              <div className="bg-slate-50 p-4 rounded">
+                <p className="text-slate-700 text-sm">
+                  <strong>En savoir plus :</strong> Pour découvrir comment Plausible protège votre vie privée, 
+                  consultez leur documentation : <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">plausible.io/privacy-focused-web-analytics</a>
                 </p>
+              </div>
+
+              <h3 className="font-bold text-slate-900 mb-3 mt-6">Cookies fonctionnels :</h3>
+              <p className="text-slate-700 mb-3">
+                Notre site peut utiliser des cookies strictement nécessaires au bon fonctionnement du site 
+                (stockage de vos préférences, sécurité). Ces cookies ne nécessitent pas votre consentement.
+              </p>
+
+              <div className="bg-slate-50 p-4 rounded">
                 <p className="text-slate-700">
                   <strong>Gestion des cookies :</strong> Vous pouvez à tout moment modifier vos préférences ou supprimer les cookies 
                   via les paramètres de votre navigateur.
