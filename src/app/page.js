@@ -65,7 +65,7 @@ export default function HomePage() {
               <div className="text-slate-600 font-light">d'exonération fiscale sur dividendes</div>
             </div>
             <div className="text-center border-x border-slate-100">
-              <div className="text-4xl md:text-5xl font-light text-amber-600 mb-3">12+</div>
+              <div className="text-4xl md:text-5xl font-light text-amber-600 mb-3">5+</div>
               <div className="text-slate-600 font-light">années d'expérience patrimoniale</div>
             </div>
             <div className="text-center">
