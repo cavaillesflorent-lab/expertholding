@@ -373,7 +373,7 @@ export default function HomePage() {
             {/* Photo */}
             <div className="relative h-[600px] rounded-sm overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" 
+                src="/images/pages/expertise/Florent.jpg" 
                 alt="Florent Cavailles" 
                 className="w-full h-full object-cover"
               />
@@ -505,8 +505,8 @@ export default function HomePage() {
                       <p className="text-slate-600 text-xs font-light">Optimisation fiscale, comptes</p>
                     </div>
                     <div className="border border-slate-200 p-3 rounded">
-                      <p className="text-slate-900 text-sm font-light mb-1"><strong>Banquiers Privés</strong></p>
-                      <p className="text-slate-600 text-xs font-light">Financement, trésorerie, placements</p>
+                      <p className="text-slate-900 text-sm font-light mb-1"><strong>Assets Management</strong></p>
+                      <p className="text-slate-600 text-xs font-light">Allocation, trésorerie</p>
                     </div>
                   </div>
                 </div>
