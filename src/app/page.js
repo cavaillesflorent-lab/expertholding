@@ -1,6 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { TrendingUp, Shield, Users, ChevronRight, Clock, Target, Award, Briefcase } from 'lucide-react'
+import { TrendingUp, Shield, Users, ChevronRight, Clock, Target, Award, Briefcase, FileText } from 'lucide-react'
 
 export default function HomePage() {
   return (
