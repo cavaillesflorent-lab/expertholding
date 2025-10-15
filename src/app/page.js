@@ -373,7 +373,7 @@ export default function HomePage() {
             {/* Photo */}
             <div className="relative h-[600px] rounded-sm overflow-hidden shadow-2xl">
               <img 
-                src="/images/pages/home/home-Florent.jpg" 
+                src="/images/pages/expertise/Florent.jpg" 
                 alt="Florent Cavailles" 
                 className="w-full h-full object-cover"
               />
