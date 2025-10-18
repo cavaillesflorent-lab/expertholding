@@ -266,9 +266,9 @@ export default function ArticleEditor({ articleId = null }) {
           <div className="flex items-center space-x-4">
             <button 
               onClick={() => router.back()}
-              className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+              className="flex items-center text-gray-700 hover:text-gray-900 font-medium transition-colors"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-5 h-5 mr-2" />
               Retour
             </button>
             <h1 className="text-3xl font-bold text-gray-900">
@@ -279,7 +279,7 @@ export default function ArticleEditor({ articleId = null }) {
           <div className="flex items-center space-x-2">
             <button
               onClick={() => setShowPreview(!showPreview)}
-              className="flex items-center px-4 py-2 bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 rounded-lg transition-colors"
+              className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
             >
               <Eye className="w-4 h-4 mr-2" />
               Aperçu
@@ -287,7 +287,7 @@ export default function ArticleEditor({ articleId = null }) {
             <button
               onClick={() => handleSave(false)}
               disabled={saveLoading}
-              className="flex items-center px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 rounded-lg transition-colors disabled:opacity-50"
+              className="flex items-center px-4 py-2 bg-white hover:bg-gray-50 text-gray-900 border border-gray-300 rounded-lg transition-colors disabled:opacity-50 font-medium"
             >
               <Save className="w-4 h-4 mr-2" />
               Brouillon
@@ -295,7 +295,7 @@ export default function ArticleEditor({ articleId = null }) {
             <button
               onClick={() => handleSave(true)}
               disabled={saveLoading}
-              className="flex items-center px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors disabled:opacity-50"
+              className="flex items-center px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors disabled:opacity-50 font-medium"
             >
               <FileText className="w-4 h-4 mr-2" />
               Publier
@@ -313,8 +313,8 @@ export default function ArticleEditor({ articleId = null }) {
                   onClick={() => setActiveTab('content')}
                   className={`flex-1 px-6 py-3 text-sm font-medium transition-colors ${
                     activeTab === 'content' 
-                      ? 'text-amber-600 border-b-2 border-amber-600' 
-                      : 'text-gray-600 hover:text-gray-900'
+                      ? 'text-amber-600 border-b-2 border-amber-600 bg-amber-50' 
+                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                   }`}
                 >
                   Contenu
@@ -323,8 +323,8 @@ export default function ArticleEditor({ articleId = null }) {
                   onClick={() => setActiveTab('seo')}
                   className={`flex-1 px-6 py-3 text-sm font-medium transition-colors ${
                     activeTab === 'seo' 
-                      ? 'text-amber-600 border-b-2 border-amber-600' 
-                      : 'text-gray-600 hover:text-gray-900'
+                      ? 'text-amber-600 border-b-2 border-amber-600 bg-amber-50' 
+                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                   }`}
                 >
                   SEO & Meta
@@ -336,7 +336,7 @@ export default function ArticleEditor({ articleId = null }) {
                 {activeTab === 'content' && (
                   <div className="space-y-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-900 mb-2">
                         Titre de l'article *
                       </label>
                       <input
@@ -344,9 +344,9 @@ export default function ArticleEditor({ articleId = null }) {
                         value={formData.title}
                         onChange={(e) => handleInputChange('title', e.target.value)}
                         placeholder="Un titre accrocheur qui donne envie de lire..."
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent"
+                        className="w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent placeholder-gray-400"
                       />
-                      <div className="text-xs text-gray-500 mt-1">
+                      <div className="text-xs text-gray-600 mt-1 font-medium">
                         {seoAnalysis.titleLength}/60 caractères
                         {seoAnalysis.titleLength > 60 && (
                           <span className="text-orange-600 ml-2">⚠️ Titre trop long</span>
@@ -355,7 +355,7 @@ export default function ArticleEditor({ articleId = null }) {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-900 mb-2">
                         URL (slug)
                       </label>
                       <input
@@ -363,21 +363,21 @@ export default function ArticleEditor({ articleId = null }) {
                         value={formData.slug}
                         onChange={(e) => handleInputChange('slug', e.target.value)}
                         placeholder="url-de-l-article"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent"
+                        className="w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent placeholder-gray-400"
                       />
-                      <div className="text-xs text-gray-500 mt-1">
-                        URL finale : /blog/{formData.slug}
+                      <div className="text-xs text-gray-600 mt-1 font-medium">
+                        URL finale : /blog/{formData.slug || 'votre-slug'}
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-900 mb-2">
                         Catégorie *
                       </label>
                       <select
                         value={formData.category}
                         onChange={(e) => handleInputChange('category', e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent"
+                        className="w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent"
                       >
                         {categories.map(cat => (
                           <option key={cat.value} value={cat.value}>{cat.label}</option>
@@ -386,7 +386,7 @@ export default function ArticleEditor({ articleId = null }) {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-900 mb-2">
                         Extrait/Résumé
                       </label>
                       <textarea
@@ -394,12 +394,12 @@ export default function ArticleEditor({ articleId = null }) {
                         onChange={(e) => handleInputChange('excerpt', e.target.value)}
                         placeholder="Un résumé engageant qui donne envie de lire l'article complet..."
                         rows={3}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent"
+                        className="w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent placeholder-gray-400"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-900 mb-2">
                         Image de couverture
                       </label>
                       {formData.cover_image && (
@@ -429,15 +429,15 @@ export default function ArticleEditor({ articleId = null }) {
                         type="button"
                         onClick={() => document.getElementById('image-upload').click()}
                         disabled={imageUploading}
-                        className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50"
+                        className="w-full flex items-center justify-center px-4 py-3 border-2 border-dashed border-gray-300 rounded-lg hover:border-amber-600 hover:bg-amber-50 transition-colors disabled:opacity-50 text-gray-700 font-medium"
                       >
-                        <Upload className="w-4 h-4 mr-2" />
+                        <Upload className="w-5 h-5 mr-2" />
                         {imageUploading ? 'Upload en cours...' : 'Choisir une image'}
                       </button>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-900 mb-2">
                         Contenu de l'article *
                       </label>
                       <textarea
@@ -454,9 +454,9 @@ export default function ArticleEditor({ articleId = null }) {
   <li>Point 2</li>
 </ul>"
                         rows={25}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg font-mono text-sm focus:ring-2 focus:ring-amber-600 focus:border-transparent"
+                        className="w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-lg font-mono text-sm focus:ring-2 focus:ring-amber-600 focus:border-transparent placeholder-gray-500"
                       />
-                      <div className="flex justify-between text-xs text-gray-500 mt-2">
+                      <div className="flex justify-between text-xs text-gray-600 mt-2 font-medium">
                         <span>{seoAnalysis.wordCount} mots</span>
                         <span>{seoAnalysis.contentLength} caractères</span>
                       </div>
@@ -468,14 +468,14 @@ export default function ArticleEditor({ articleId = null }) {
                 {activeTab === 'seo' && (
                   <div className="space-y-6">
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-start">
-                      <Info className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <Info className="w-5 h-5 text-blue-700 mr-3 mt-0.5 flex-shrink-0" />
                       <p className="text-sm text-blue-900">
                         Optimisez ces champs pour améliorer votre référencement sur Google et les réseaux sociaux.
                       </p>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-900 mb-2">
                         Titre SEO (balise title)
                       </label>
                       <input
@@ -483,15 +483,15 @@ export default function ArticleEditor({ articleId = null }) {
                         value={formData.meta_title}
                         onChange={(e) => handleInputChange('meta_title', e.target.value)}
                         placeholder="Titre optimisé pour Google"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent"
+                        className="w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent placeholder-gray-400"
                       />
-                      <div className="text-xs text-gray-500 mt-1">
+                      <div className="text-xs text-gray-600 mt-1 font-medium">
                         {formData.meta_title.length}/60 caractères recommandés
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-900 mb-2">
                         Méta-description
                       </label>
                       <textarea
@@ -499,9 +499,9 @@ export default function ArticleEditor({ articleId = null }) {
                         onChange={(e) => handleInputChange('meta_description', e.target.value)}
                         placeholder="Description qui apparaîtra dans les résultats Google"
                         rows={3}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent"
+                        className="w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent placeholder-gray-400"
                       />
-                      <div className="text-xs text-gray-500 mt-1">
+                      <div className="text-xs text-gray-600 mt-1 font-medium">
                         {seoAnalysis.metaLength}/160 caractères recommandés
                         {seoAnalysis.metaLength > 160 && (
                           <span className="text-orange-600 ml-2">⚠️ Trop long</span>
@@ -510,7 +510,7 @@ export default function ArticleEditor({ articleId = null }) {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-900 mb-2">
                         Mots-clés SEO
                       </label>
                       <input
@@ -518,9 +518,9 @@ export default function ArticleEditor({ articleId = null }) {
                         value={formData.keywords}
                         onChange={(e) => handleInputChange('keywords', e.target.value)}
                         placeholder="holding, fiscalité, transmission"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent"
+                        className="w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent placeholder-gray-400"
                       />
-                      <div className="text-xs text-gray-500 mt-1">
+                      <div className="text-xs text-gray-600 mt-1 font-medium">
                         Séparez les mots-clés par des virgules
                       </div>
                     </div>
@@ -547,7 +547,7 @@ export default function ArticleEditor({ articleId = null }) {
                         <h4 className={`text-sm font-medium ${getStatusColor(tip.status)}`}>
                           {tip.title}
                         </h4>
-                        <p className="text-xs text-gray-600 mt-1">{tip.tip}</p>
+                        <p className="text-xs text-gray-700 mt-1">{tip.tip}</p>
                       </div>
                     </div>
                   </div>
@@ -573,7 +573,7 @@ export default function ArticleEditor({ articleId = null }) {
                     ) : (
                       <div className="w-4 h-4 border-2 border-gray-300 rounded-full" />
                     )}
-                    <span className={item.check ? 'text-green-700' : 'text-gray-600'}>
+                    <span className={item.check ? 'text-green-700 font-medium' : 'text-gray-700'}>
                       {item.text}
                     </span>
                   </div>
@@ -588,7 +588,7 @@ export default function ArticleEditor({ articleId = null }) {
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
             <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
               <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between">
-                <h2 className="text-xl font-bold">Aperçu</h2>
+                <h2 className="text-xl font-bold text-gray-900">Aperçu</h2>
                 <button onClick={() => setShowPreview(false)} className="p-2 hover:bg-gray-100 rounded-lg">
                   <X className="w-5 h-5" />
                 </button>
@@ -598,7 +598,7 @@ export default function ArticleEditor({ articleId = null }) {
                   <img src={formData.cover_image} alt={formData.title} className="w-full h-80 object-cover rounded-lg mb-6" />
                 )}
                 <div className="mb-4">
-                  <span className="px-3 py-1 bg-amber-100 text-amber-700 text-sm rounded-full">
+                  <span className="px-3 py-1 bg-amber-100 text-amber-700 text-sm rounded-full font-medium">
                     {categories.find(c => c.value === formData.category)?.label}
                   </span>
                 </div>
