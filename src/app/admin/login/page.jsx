@@ -1,4 +1,4 @@
-cat > src/app/admin/login/page.jsx << 'EOF'
+'EOF'
 'use client'
 
 import { useState } from 'react'

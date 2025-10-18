@@ -1,4 +1,4 @@
-cat > "src/app/blog/[slug]/page.jsx" << 'EOF'
+'EOF'
 'use client'
 
 import { useArticle } from '@/hooks/useArticles'
