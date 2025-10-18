@@ -1,4 +1,4 @@
-cat > src/app/blog/layout.jsx << 'EOF'
+
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -16,4 +16,3 @@ export default function BlogLayout({ children }) {
     </>
   )
 }
-EOF

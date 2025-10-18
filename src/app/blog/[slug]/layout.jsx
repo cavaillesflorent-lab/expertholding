@@ -1,4 +1,3 @@
-cat > "src/app/blog/[slug]/layout.jsx" << 'EOF'
 import { supabase } from '@/lib/supabase'
 
 export async function generateMetadata({ params }) {
@@ -34,4 +33,3 @@ export async function generateMetadata({ params }) {
 export default function ArticleLayout({ children }) {
   return <>{children}</>
 }
-EOF

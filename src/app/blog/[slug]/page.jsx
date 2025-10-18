@@ -1,4 +1,3 @@
-'EOF'
 'use client'
 
 import { useArticle } from '@/hooks/useArticles'
@@ -132,4 +131,3 @@ export default function ArticlePage({ params }) {
     </>
   )
 }
-EOF

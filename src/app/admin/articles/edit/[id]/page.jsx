@@ -1,4 +1,3 @@
-cat > "src/app/admin/articles/edit/[id]/page.jsx" << 'EOF'
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -72,4 +71,3 @@ export default function EditArticlePage({ params }) {
     </div>
   )
 }
-EOF
