@@ -1,12 +1,14 @@
+'EOF'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: { 
-    unoptimized: true 
+  images: {
+    domains: ['images.unsplash.com'],
+    formats: ['image/avif', 'image/webp'],
   },
-  eslint: {
-    // Ignore les erreurs ESLint pendant le build
-    ignoreDuringBuilds: true
-  }
+  swcMinify: true,
+  reactStrictMode: true,
+  compress: true,
 }
 
 module.exports = nextConfig
+EOF

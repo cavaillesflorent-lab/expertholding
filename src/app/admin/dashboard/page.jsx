@@ -1,4 +1,4 @@
-cat > src/app/admin/dashboard/page.jsx << 'EOF'
+'EOF'
 'use client'
 
 import { useEffect, useState } from 'react'
