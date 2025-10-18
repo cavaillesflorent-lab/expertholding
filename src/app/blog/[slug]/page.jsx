@@ -74,7 +74,7 @@ export default async function ArticlePage({ params }) {
   }
 
   return (
-    <>
+    <div className="bg-white min-h-screen">
       {/* Hero avec image de couverture */}
       {article.cover_image && (
         <div className="relative h-[400px] lg:h-[500px] overflow-hidden">
@@ -134,12 +134,12 @@ export default async function ArticlePage({ params }) {
         </div>
 
         {/* Contenu de l'article avec styles */}
-        <div className="mb-16">
+        <div className="mb-16 bg-white">
           <ArticleContent content={article.content} />
         </div>
 
         {/* Section auteur */}
-        <div className="border-t border-slate-200 pt-12 mb-16">
+        <div className="border-t border-slate-200 pt-12 mb-16 bg-white">
           <div className="flex items-start space-x-6">
             <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 bg-slate-100">
               <img 
@@ -184,6 +184,6 @@ export default async function ArticlePage({ params }) {
           </div>
         </div>
       </article>
-    </>
+    </div>
   )
 }
