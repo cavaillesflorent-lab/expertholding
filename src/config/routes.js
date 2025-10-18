@@ -1,4 +1,4 @@
-cat > src/config/routes.js << 'EOF'
+
 // Configuration des routes du site
 export const routes = {
   mainNav: [
@@ -130,4 +130,3 @@ export const routes = {
     forbes: 'https://www.forbes.fr/mediasfrance/occitea-patrimoine/'
   }
 }
-EOF

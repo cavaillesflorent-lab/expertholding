@@ -1,4 +1,3 @@
-cat > src/components/Footer.js << 'EOF'
 import Link from 'next/link'
 
 export default function Footer({ currentPage = 'accueil' }) {
@@ -152,4 +151,3 @@ export default function Footer({ currentPage = 'accueil' }) {
     </footer>
   )
 }
-EOF
