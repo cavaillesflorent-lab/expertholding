@@ -1,7 +1,4 @@
-'EOF'
-import { supabase } from '@/lib/supabase'
-
-export default async function sitemap() {
+export default function sitemap() {
   const baseUrl = 'https://expertholding.fr'
 
   const routes = [
@@ -24,18 +21,5 @@ export default async function sitemap() {
     priority: route === '' ? 1 : 0.8,
   }))
 
-  const { data: articles } = await supabase
-    .from('articles')
-    .select('slug, updated_at')
-    .eq('published', true)
-
-  const articleRoutes = (articles || []).map(article => ({
-    url: `${baseUrl}/blog/${article.slug}`,
-    lastModified: new Date(article.updated_at),
-    changeFrequency: 'weekly',
-    priority: 0.7,
-  }))
-
-  return [...routes, ...articleRoutes]
+  return routes
 }
-EOF
