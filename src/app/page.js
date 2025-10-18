@@ -561,6 +561,33 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Blog - Derniers Articles */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-slate-900 mb-6">
+              Derniers Articles
+            </h2>
+            <p className="text-lg text-slate-600 font-light leading-relaxed">
+              Conseils et actualités sur la gestion patrimoniale, les holdings et la transmission d'entreprise
+            </p>
+          </div>
+
+          <BlogArticlesSection />
+
+          {/* CTA vers le blog */}
+          <div className="text-center mt-12">
+             <a
+              href="/blog"
+              className="inline-flex items-center justify-center border border-slate-200 hover:border-amber-600 hover:bg-amber-50 text-slate-900 px-8 py-4 text-base font-light transition-all group"
+            >
+              Voir tous les articles
+              <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Final */}
       <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">

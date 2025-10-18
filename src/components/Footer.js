@@ -1,3 +1,4 @@
+cat > src/components/Footer.js << 'EOF'
 import Link from 'next/link'
 
 export default function Footer({ currentPage = 'accueil' }) {
@@ -10,10 +11,16 @@ export default function Footer({ currentPage = 'accueil' }) {
     { name: 'Contact', href: '/contact', key: 'contact' }
   ]
 
+  const ressources = [
+    { name: 'Articles & Conseils', href: '/blog/', key: 'blog' },
+    { name: 'Guides Patrimoniaux', href: '/blog/', key: 'guides' },
+    { name: 'Actualités Holdings', href: '/blog/', key: 'actualites' }
+  ]
+
   return (
     <footer className="bg-white border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-5 gap-8 mb-12">
           {/* Présentation */}
           <div className="md:col-span-2">
             <div className="text-2xl font-light tracking-tight text-slate-900 mb-4">
@@ -52,6 +59,29 @@ export default function Footer({ currentPage = 'accueil' }) {
             </ul>
           </div>
 
+          {/* Ressources - NOUVEAU */}
+          <div>
+            <h3 className="text-sm font-light text-slate-900 mb-4 uppercase tracking-wide">
+              Ressources
+            </h3>
+            <ul className="space-y-3">
+              {ressources.map((item) => (
+                <li key={item.key}>
+                  <Link
+                    href={item.href}
+                    className={`font-light transition-colors ${
+                      currentPage === item.key
+                        ? 'text-amber-600 font-medium'
+                        : 'text-slate-600 hover:text-amber-600'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <h3 className="text-sm font-light text-slate-900 mb-4 uppercase tracking-wide">
@@ -59,16 +89,14 @@ export default function Footer({ currentPage = 'accueil' }) {
             </h3>
             <ul className="space-y-3">
               <li>
-                
-                 <a href="tel:0607963135"
+                <a href="tel:0607963135"
                   className="text-slate-600 hover:text-amber-600 font-light transition-colors"
                 >
                   06 07 96 31 35
                 </a>
               </li>
               <li>
-                
-                  <a href="mailto:florent@occitea-ip.fr"
+                <a href="mailto:florent@occitea-ip.fr"
                   className="text-slate-600 hover:text-amber-600 font-light transition-colors"
                 >
                   florent@occitea-ip.fr
@@ -124,3 +152,4 @@ export default function Footer({ currentPage = 'accueil' }) {
     </footer>
   )
 }
+EOF

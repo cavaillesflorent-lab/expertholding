@@ -1,3 +1,4 @@
+cat > src/config/routes.js << 'EOF'
 // Configuration des routes du site
 export const routes = {
   mainNav: [
@@ -9,30 +10,31 @@ export const routes = {
     {
       id: 'creer',
       label: 'Créer',
-      href: '/creer-holding/',  // ✅ Ajout du /
+      href: '/creer-holding/',
       hasSubmenu: true
     },
     {
       id: 'gerer',
       label: 'Gérer',
-      href: '/gerer-holding/',  // ✅ Ajout du /
+      href: '/gerer-holding/',
       hasSubmenu: true
     },
     {
       id: 'transmettre',
       label: 'Transmettre',
-      href: '/transmettre-holding/'  // ✅ Ajout du /
+      href: '/transmettre-holding/'
     },
     {
       id: 'expertise',
       label: 'Expertise',
-      href: '/expertise/',  // ✅ Ajout du /
+      href: '/expertise/',
       hasSubmenu: true
     },
+    
     {
       id: 'contact',
       label: 'Contact',
-      href: '/contact/'  // ✅ Ajout du /
+      href: '/contact/'
     }
   ],
   
@@ -40,13 +42,13 @@ export const routes = {
     {
       id: 'apport-cession',
       label: 'Apport-Cession',
-      href: '/apport-cession/',  // ✅ Ajout du /
+      href: '/apport-cession/',
       description: 'Optimiser la fiscalité de votre cession'
     },
     {
       id: 'holding-familiale',
       label: 'Holding Familiale',
-      href: '/holding-familiale/',  // ✅ Ajout du /
+      href: '/holding-familiale/',
       description: 'Structurer et transmettre votre patrimoine'
     }
   ],
@@ -55,19 +57,19 @@ export const routes = {
     {
       id: 'valoriser-entreprise',
       label: 'Valoriser mon entreprise',
-      href: '/gerer-holding/valoriser-entreprise/',  // ✅ Ajout du /
+      href: '/gerer-holding/valoriser-entreprise/',
       description: 'Méthodes de valorisation'
     },
     {
       id: 'obo',
       label: 'OBO - Owner Buy-Out',
-      href: '/gerer-holding/obo/',  // ✅ Ajout du /
+      href: '/gerer-holding/obo/',
       description: 'Vente à soi-même via holding'
     },
     {
       id: 'lbo',
       label: 'LBO - Leverage Buy-Out',
-      href: '/gerer-holding/lbo/',  // ✅ Ajout du /
+      href: '/gerer-holding/lbo/',
       description: 'Acquisition par effet de levier'
     }
   ],
@@ -76,39 +78,47 @@ export const routes = {
     { 
       id: 'assurance-vie-lux',
       label: 'Assurance-vie luxembourgeoise', 
-      href: '/solutions/assurance-vie-luxembourgeoise/'  // ✅ Ajout du /
+      href: '/solutions/assurance-vie-luxembourgeoise/'
     },
     { 
       id: 'capitalisation-lux',
       label: 'Contrat de capitalisation luxembourgeois', 
-      href: '/solutions/contrat-capitalisation-luxembourgeois/'  // ✅ Ajout du /
+      href: '/solutions/contrat-capitalisation-luxembourgeois/'
     },
     { 
       id: 'compte-titres',
       label: 'Compte titres', 
-      href: '/solutions/compte-titres/'  // ✅ Ajout du /
+      href: '/solutions/compte-titres/'
     },
     { 
       id: 'private-equity',
       label: 'Private Equity', 
-      href: '/solutions/private-equity/'  // ✅ Ajout du /
+      href: '/solutions/private-equity/'
     },
     { 
       id: 'immobilier',
       label: 'Immobilier', 
-      href: '/solutions/immobilier/'  // ✅ Ajout du /
+      href: '/solutions/immobilier/'
     },
     { 
       id: 'defiscalisation',
       label: 'Défiscalisation', 
-      href: '/solutions/defiscalisation/'  // ✅ Ajout du /
+      href: '/solutions/defiscalisation/'
     },
     { 
       id: 'scpi',
       label: 'SCPI', 
-      href: '/solutions/scpi/'  // ✅ Ajout du /
+      href: '/solutions/scpi/'
     }
   ],
+
+  // Routes admin (non affichées dans nav publique)
+  admin: {
+    login: '/admin/login',
+    dashboard: '/admin/dashboard',
+    articlesNew: '/admin/articles/new',
+    articlesEdit: (id) => `/admin/articles/edit/${id}`
+  },
 
   contact: {
     email: 'florent@occitea-ip.fr',
@@ -120,3 +130,4 @@ export const routes = {
     forbes: 'https://www.forbes.fr/mediasfrance/occitea-patrimoine/'
   }
 }
+EOF
