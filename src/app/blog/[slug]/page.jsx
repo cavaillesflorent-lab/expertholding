@@ -92,11 +92,11 @@ export default async function ArticlePage({ params }) {
         {/* En-tête article */}
         <div className={`${article.cover_image ? '-mt-32' : 'pt-32'} relative z-10 mb-12`}>
           <Link 
-            href="/blog"
+            href="/"
             className="inline-flex items-center text-slate-600 hover:text-amber-600 transition-colors mb-6 font-light"
           >
             <ArrowLeft size={18} className="mr-2" />
-            Retour aux articles
+            Retour à l'accueil
           </Link>
 
           <div className="mb-6">
