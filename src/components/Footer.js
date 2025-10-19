@@ -1,3 +1,4 @@
+bashcat > src/components/Footer.jsx << 'ENDOFFILE'
 import Link from 'next/link'
 
 export default function Footer({ currentPage = 'accueil' }) {
@@ -11,9 +12,8 @@ export default function Footer({ currentPage = 'accueil' }) {
   ]
 
   const ressources = [
-    { name: 'Articles & Conseils', href: '/blog/', key: 'blog' },
-    { name: 'Guides Patrimoniaux', href: '/blog/', key: 'guides' },
-    { name: 'Actualités Holdings', href: '/blog/', key: 'actualites' }
+    { name: 'Articles & Conseils', href: '/#actualites', key: 'blog' },
+    { name: 'Valorisation de société', href: 'https://taap.it/eyGWUj', key: 'valorisation', external: true }
   ]
 
   return (
@@ -58,7 +58,7 @@ export default function Footer({ currentPage = 'accueil' }) {
             </ul>
           </div>
 
-          {/* Ressources - NOUVEAU */}
+          {/* Ressources */}
           <div>
             <h3 className="text-sm font-light text-slate-900 mb-4 uppercase tracking-wide">
               Ressources
@@ -66,16 +66,27 @@ export default function Footer({ currentPage = 'accueil' }) {
             <ul className="space-y-3">
               {ressources.map((item) => (
                 <li key={item.key}>
-                  <Link
-                    href={item.href}
-                    className={`font-light transition-colors ${
-                      currentPage === item.key
-                        ? 'text-amber-600 font-medium'
-                        : 'text-slate-600 hover:text-amber-600'
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-600 hover:text-amber-600 font-light transition-colors"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className={`font-light transition-colors ${
+                        currentPage === item.key
+                          ? 'text-amber-600 font-medium'
+                          : 'text-slate-600 hover:text-amber-600'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
