@@ -1,4 +1,3 @@
-bashcat > src/components/Footer.jsx << 'ENDOFFILE'
 import Link from 'next/link'
 
 export default function Footer({ currentPage = 'accueil' }) {
