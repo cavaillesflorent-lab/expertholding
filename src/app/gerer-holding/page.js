@@ -304,7 +304,7 @@ export default function GererHoldingPage() {
             {/* Photo */}
             <div className="relative h-[500px] rounded-sm overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1554224311-9783b8e1d5b3?w=800&q=80" 
+                src="/images/pages/gerer-holding/management.jpg" 
                 alt="Management fees" 
                 className="w-full h-full object-cover"
               />
