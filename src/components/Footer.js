@@ -11,7 +11,7 @@ export default function Footer({ currentPage = 'accueil' }) {
   ]
 
   const ressources = [
-    { name: 'Articles & Conseils', href: '/#actualites', key: 'blog' },
+    { name: 'Articles & Conseils', href: '/blog', key: 'blog' },
     { name: 'Valorisation de société', href: 'https://taap.it/eyGWUj', key: 'valorisation', external: true }
   ]
 
