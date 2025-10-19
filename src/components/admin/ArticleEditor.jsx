@@ -41,6 +41,7 @@ export default function ArticleEditor({ articleId = null }) {
     meta_title: '',
     meta_description: '',
     keywords: '',
+    long_tail_keywords: '',
     published: false
   })
 
@@ -135,6 +136,7 @@ export default function ArticleEditor({ articleId = null }) {
           meta_title: data.meta_title || '',
           meta_description: data.meta_description || '',
           keywords: data.keywords || '',
+          long_tail_keywords: data.long_tail_keywords || '',
           published: data.published || false
         })
       }
@@ -201,6 +203,7 @@ export default function ArticleEditor({ articleId = null }) {
         meta_title: formData.meta_title,
         meta_description: formData.meta_description,
         keywords: formData.keywords,
+        long_tail_keywords: formData.long_tail_keywords,
         published: publish,
         updated_at: new Date().toISOString()
       }
@@ -522,6 +525,28 @@ export default function ArticleEditor({ articleId = null }) {
                       />
                       <div className="text-xs text-gray-600 mt-1 font-medium">
                         Séparez les mots-clés par des virgules
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-900 mb-2">
+                        Mots-clés longue traîne 🎯
+                      </label>
+                      <textarea
+                        value={formData.long_tail_keywords}
+                        onChange={(e) => handleInputChange('long_tail_keywords', e.target.value)}
+                        placeholder="comment créer une holding patrimoniale, holding pour transmission entreprise familiale, optimisation fiscale holding SARL"
+                        rows={3}
+                        className="w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent placeholder-gray-400"
+                      />
+                      <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mt-2">
+                        <div className="flex items-start">
+                          <Lightbulb className="w-4 h-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                          <div className="text-xs text-amber-900">
+                            <strong className="font-medium">💡 Longue traîne :</strong> Expressions de 3+ mots ciblant des recherches spécifiques et moins concurrentielles. 
+                            Exemple : "comment créer une holding pour optimiser l'impôt" plutôt que juste "holding".
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
