@@ -116,12 +116,12 @@ export default function CreerHoldingPage() {
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            {/* Holding passive avec photo */}
+            {/* Holding pure avec photo */}
             <div className="bg-white border border-slate-100 overflow-hidden">
               <div className="relative h-64">
                 <img 
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" 
-                  alt="Holding passive" 
+                  alt="Holding pure" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
@@ -132,7 +132,7 @@ export default function CreerHoldingPage() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-light text-slate-900 mb-4">Holding Passive</h3>
+                <h3 className="text-2xl font-light text-slate-900 mb-4">Holding Pure</h3>
                 <p className="text-slate-600 font-light leading-relaxed mb-6">
                   Simple détention de titres, sans intervention dans la gestion courante des filiales. La holding perçoit dividendes et plus-values, mais n'anime pas activement le groupe.
                 </p>
@@ -154,12 +154,12 @@ export default function CreerHoldingPage() {
               </div>
             </div>
 
-            {/* Holding animatrice avec photo */}
+            {/* Holding opérationnelle avec photo */}
             <div className="bg-amber-50 border border-amber-100 overflow-hidden">
               <div className="relative h-64">
                 <img 
                   src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" 
-                  alt="Holding animatrice" 
+                  alt="Holding opérationnelle" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-900/60 to-transparent"></div>
@@ -170,7 +170,7 @@ export default function CreerHoldingPage() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-light text-slate-900 mb-4">Holding Animatrice</h3>
+                <h3 className="text-2xl font-light text-slate-900 mb-4">Holding opérationnelle</h3>
                 <p className="text-slate-600 font-light leading-relaxed mb-6">
                   Participe activement à la conduite de la politique du groupe et au contrôle des filiales (services administratifs, stratégie, contrôle de gestion, etc.).
                 </p>
@@ -199,8 +199,8 @@ export default function CreerHoldingPage() {
               <thead className="bg-slate-50">
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-light text-slate-900 border-b border-slate-200">Critère</th>
-                  <th className="px-6 py-4 text-left text-sm font-light text-slate-900 border-b border-l border-slate-200">Holding Passive</th>
-                  <th className="px-6 py-4 text-left text-sm font-light text-slate-900 border-b border-l border-slate-200">Holding Animatrice</th>
+                  <th className="px-6 py-4 text-left text-sm font-light text-slate-900 border-b border-l border-slate-200">Holding pure</th>
+                  <th className="px-6 py-4 text-left text-sm font-light text-slate-900 border-b border-l border-slate-200">Holding opérationnelle</th>
                 </tr>
               </thead>
               <tbody className="bg-white">
@@ -540,8 +540,8 @@ export default function CreerHoldingPage() {
                 a: "Oui, via une SASU (SAS unipersonnelle) ou une EURL. Attention : certains avantages fiscaux (Pacte Dutreil) nécessitent plusieurs associés."
               },
               {
-                q: "Holding passive ou animatrice : laquelle choisir ?",
-                a: "Si vous visez le Pacte Dutreil ou l'exonération IFI, choisissez l'animatrice. Si votre objectif est uniquement l'optimisation des dividendes, la passive suffit."
+                q: "Holding pure ou opérationnelle : laquelle choisir ?",
+                a: "Si vous visez le Pacte Dutreil ou l'exonération IFI, choisissez l'opérationnelle. Si votre objectif est uniquement l'optimisation des dividendes, la pure suffit."
               }
             ].map((faq, idx) => (
               <div key={idx} className="bg-white border border-slate-100 p-6">

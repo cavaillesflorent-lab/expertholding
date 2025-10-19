@@ -283,10 +283,10 @@ export default function TransmettreHoldingPage() {
             <div className="bg-amber-50 border-l-4 border-amber-400 p-6">
               <h4 className="font-bold text-slate-900 mb-2 flex items-center">
                 <AlertTriangle className="w-5 h-5 text-amber-600 mr-2" />
-                Holdings animatrices vs passives
+                Holdings opérationnelles vs pures
               </h4>
               <p className="text-slate-700 mb-4">
-                Le Pacte Dutreil s'applique aux <strong>holdings animatrices</strong> qui exercent une activité d'animation de groupe (services partagés, stratégie commune, conventions intragroupe). Pour les holdings passives, l'éligibilité peut être obtenue par interposition si elles détiennent des filiales opérationnelles éligibles.
+                Le Pacte Dutreil s'applique aux <strong>holdings opérationnelles</strong> qui exercent une activité d'animation de groupe (services partagés, stratégie commune, conventions intragroupe). Pour les holdings pures, l'éligibilité peut être obtenue par interposition si elles détiennent des filiales opérationnelles éligibles.
               </p>
               <p className="text-slate-700 mb-0">
                 <strong>Documentation essentielle :</strong> procès-verbaux, conventions de services, organigramme fonctionnel, preuves de l'animation effective.
@@ -310,7 +310,7 @@ export default function TransmettreHoldingPage() {
                   <span className="text-2xl font-bold text-white">1</span>
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-slate-900">SAS à l'IS - Holding animatrice</h3>
+                  <h3 className="text-3xl font-bold text-slate-900">SAS à l'IS - Holding opérationnelle</h3>
                   <p className="text-slate-600">Valorisation 2 000 000 € • 2 enfants</p>
                 </div>
               </div>
@@ -645,7 +645,7 @@ export default function TransmettreHoldingPage() {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-amber-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Idéal pour Dutreil (holding animatrice)</span>
+                      <span>Idéal pour Dutreil (holding opérationnelle)</span>
                     </li>
                   </ul>
                 </div>
@@ -796,7 +796,7 @@ export default function TransmettreHoldingPage() {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-center mb-4">
                   <AlertTriangle className="w-8 h-8 text-red-500 mr-3" />
-                  <h3 className="text-xl font-bold text-slate-900">Requalification holding passive</h3>
+                  <h3 className="text-xl font-bold text-slate-900">Requalification holding pure</h3>
                 </div>
                 <p className="text-slate-700 mb-3">Perte du bénéfice Dutreil si l'animation n'est pas prouvée.</p>
                 <p className="text-sm text-slate-600"><strong>Leviers :</strong> Preuves d'animation, conventions intragroupe, PV, organes actifs</p>
@@ -891,7 +891,7 @@ export default function TransmettreHoldingPage() {
                 <strong>Code Général des Impôts :</strong> Art. 787 B et 787 C (Pacte Dutreil), Art. 790 (réduction 50%), Art. 200 A, 2 (PFU), Art. 150-0 B ter (report d'imposition), Art. 669 (barème démembrement), Art. 1133 (réunion usufruit/NP).
               </p>
               <p className="mb-4">
-                <strong>Doctrine administrative :</strong> BOI sur holdings animatrices/passives, engagements de conservation, transmissions successives, majoration prix de revient.
+                <strong>Doctrine administrative :</strong> BOI sur holdings opérationnelles/pures, engagements de conservation, transmissions successives, majoration prix de revient.
               </p>
               <p className="mb-0">
                 <strong>Jurisprudence :</strong> Décotes minorité/liquidité (15%-20%), conditions Dutreil, mise en réserve post-démembrement.

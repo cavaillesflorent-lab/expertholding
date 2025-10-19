@@ -42,7 +42,7 @@ export default function GererHoldingPage() {
           <h2 className="text-lg font-light text-slate-900 mb-6">Sommaire</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              "Holding animatrice vs passive",
+              "Holding opérationnelle vs pure",
               "Régime mère-fille",
               "Intégration fiscale",
               "Management fees",
@@ -62,25 +62,25 @@ export default function GererHoldingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xl text-slate-600 font-light leading-relaxed">
-            Une holding est un outil puissant de structuration, d'optimisation et de transmission patrimoniale. Encore faut-il en maîtriser les règles juridiques et fiscales, distinguer holding animatrice de holding passive, optimiser les flux financiers tout en respectant les contraintes réglementaires.
+            Une holding est un outil puissant de structuration, d'optimisation et de transmission patrimoniale. Encore faut-il en maîtriser les règles juridiques et fiscales, distinguer holding opérationnelle de holding pure, optimiser les flux financiers tout en respectant les contraintes réglementaires.
           </p>
         </div>
       </section>
 
-      {/* Section 1 : Animatrice vs Passive avec photos */}
+      {/* Section 1 : Opérationnelle vs Pure avec photos */}
       <section id="section-1" className="py-24 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-light text-slate-900 mb-16 text-center">
-            Holding Animatrice vs Passive : qualification fiscale
+            Holding Opérationnelle vs Pure : qualification fiscale
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            {/* Holding passive avec photo */}
+            {/* Holding pure avec photo */}
             <div className="bg-white border border-slate-100 overflow-hidden">
               <div className="relative h-64">
                 <img 
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" 
-                  alt="Holding passive" 
+                  alt="Holding pure" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
@@ -91,7 +91,7 @@ export default function GererHoldingPage() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-light text-slate-900 mb-4">Holding Passive</h3>
+                <h3 className="text-2xl font-light text-slate-900 mb-4">Holding Pure</h3>
                 <p className="text-slate-600 font-light leading-relaxed mb-6">
                   Simple détention de titres, perception de dividendes et plus-values. Aucune participation active à la gestion des filiales.
                 </p>
@@ -112,12 +112,12 @@ export default function GererHoldingPage() {
               </div>
             </div>
 
-            {/* Holding animatrice avec photo */}
+            {/* Holding opérationnelle avec photo */}
             <div className="bg-amber-50 border border-amber-100 overflow-hidden">
               <div className="relative h-64">
                 <img 
                   src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" 
-                  alt="Holding animatrice" 
+                  alt="Holding opérationnelle" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-900/60 to-transparent"></div>
@@ -128,7 +128,7 @@ export default function GererHoldingPage() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-light text-slate-900 mb-4">Holding Animatrice</h3>
+                <h3 className="text-2xl font-light text-slate-900 mb-4">Holding Opérationnelle</h3>
                 <p className="text-slate-600 font-light leading-relaxed mb-6">
                   Participation active, effective et continue à la conduite de la politique du groupe et au contrôle des filiales.
                 </p>
@@ -417,7 +417,7 @@ export default function GererHoldingPage() {
           <div className="bg-amber-50 border border-amber-100 p-6">
             <h3 className="text-lg font-light text-slate-900 mb-3">Jurisprudence clé</h3>
             <p className="text-sm text-slate-600 font-light leading-relaxed">
-              <strong>CJUE, Larentia + Minerva (2015)</strong> : La simple détention de participations ne constitue pas une activité économique au sens de la TVA. Seule une holding animatrice facturant des prestations peut déduire la TVA.
+              <strong>CJUE, Larentia + Minerva (2015)</strong> : La simple détention de participations ne constitue pas une activité économique au sens de la TVA. Seule une holding opérationnelle facturant des prestations peut déduire la TVA.
             </p>
           </div>
         </div>
@@ -436,7 +436,7 @@ export default function GererHoldingPage() {
               {[
                 {
                   color: "red",
-                  title: "Requalification en holding passive",
+                  title: "Requalification en holding pure",
                   desc: "Sans animation effective et continue, perte du Pacte Dutreil et de l'exonération IFI. Preuves nécessaires : contrats de prestation, salariés, locaux, reporting régulier.",
                   solution: "Documenter systématiquement toute intervention : PV de réunion, notes de service, contrats, factures."
                 },

@@ -76,7 +76,7 @@ export default function HoldingFamilialePage() {
             <div className="p-6 bg-amber-50 rounded-lg border-2 border-amber-300">
               <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center">
                 <Building2 className="w-6 h-6 text-amber-600 mr-2" />
-                Holding Animatrice
+                Holding Opérationnelle
               </h3>
               <p className="text-slate-700 mb-4">
                 Participe activement à la gestion et au contrôle des filiales (services administratifs, financiers, juridiques).
@@ -131,7 +131,7 @@ export default function HoldingFamilialePage() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle2 className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                  <span><strong>IFI :</strong> Exonération totale si holding animatrice + Pacte Dutreil</span>
+                  <span><strong>IFI :</strong> Exonération totale si holding opérationnelle + Pacte Dutreil</span>
                 </li>
               </ul>
             </div>
@@ -333,7 +333,7 @@ export default function HoldingFamilialePage() {
           <div className="space-y-6">
             {[
               {
-                titre: "Holding passive déguisée en animatrice",
+                titre: "Holding pure déguisée en opérationnelle",
                 consequence: "Remise en cause des avantages fiscaux (IFI, Dutreil) par l'administration",
                 parade: "Formaliser et facturer les prestations réelles (convention, bulletins de salaire si dirigeants)"
               },
@@ -416,7 +416,7 @@ export default function HoldingFamilialePage() {
             <div className="bg-white p-8 rounded-lg shadow-md border border-amber-200">
               <h3 className="text-xl font-bold text-slate-900 mb-4">4. Optimiser l'IFI</h3>
               <p className="text-slate-700">
-                <strong>Exonération totale</strong> si holding animatrice de société(s) opérationnelle(s) + Pacte Dutreil. 
+                <strong>Exonération totale</strong> si holding opérationnelle de société(s) opérationnelle(s) + Pacte Dutreil. 
                 Application des décotes minoritaire et illiquidité (15-30%) sur les titres non cotés.
               </p>
             </div>
