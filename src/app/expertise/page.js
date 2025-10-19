@@ -55,7 +55,7 @@ export default function ExpertisePage() {
       title: 'SCPI',
       icon: <Landmark className="w-6 h-6" />,
       description: 'Revenus réguliers, mutualisation, gestion déléguée',
-      description: 'Investissement immobilier clé en main avec revenus trimestriels. Les SCPI offrent une exposition diversifiée (bureaux, commerces, santé, logistique) sans contrainte de gestion.'
+      details: 'Investissement immobilier clé en main avec revenus trimestriels. Les SCPI offrent une exposition diversifiée (bureaux, commerces, santé, logistique) sans contrainte de gestion.'
     }
   ]
 
@@ -112,11 +112,12 @@ export default function ExpertisePage() {
                 </div>
               </div>
               
-              <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
                   src="/images/pages/expertise/Florent.jpg" 
-                  alt="Approche personnalisée"
-                  className="w-full h-full object-cover hover:scale-105 transition duration-500"
+                  alt="Florent Cavailles - Expert en gestion patrimoniale"
+                  className="w-full h-full object-cover object-center hover:scale-105 transition duration-500"
+                  style={{ objectPosition: 'center 30%' }}
                 />
               </div>
             </div>
