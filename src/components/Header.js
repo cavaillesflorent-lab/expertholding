@@ -161,8 +161,7 @@ export default function Header({ currentPage = 'accueil' }) {
             })}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <a href={`tel:${routes.contact.phone}`} className="text-slate-600 hover:text-amber-600 font-medium transition">{routes.contact.phoneFormatted}</a>
+          <div className="hidden md:flex items-center">
             <a href="https://taap.it/i3gsEr" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 transition">Prendre RDV</a>
           </div>
 
@@ -283,8 +282,7 @@ export default function Header({ currentPage = 'accueil' }) {
                   </a>
                 )
               })}
-              <div className="pt-4 border-t border-slate-200 space-y-3">
-                <a href={`tel:${routes.contact.phone}`} className="block text-slate-600 hover:text-amber-600 font-medium transition">{routes.contact.phoneFormatted}</a>
+              <div className="pt-4 border-t border-slate-200">
                 <a href="https://taap.it/i3gsEr" target="_blank" rel="noopener noreferrer" className="block px-6 py-2 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 transition text-center">Prendre RDV</a>
               </div>
             </nav>

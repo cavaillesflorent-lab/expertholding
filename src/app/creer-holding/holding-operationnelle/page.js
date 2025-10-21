@@ -1,3 +1,5 @@
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { ChevronRight, CheckCircle, AlertTriangle, TrendingUp, Shield, FileText, Users, Briefcase, Award, Target, BarChart3 } from 'lucide-react'
 
 export default function HoldingOperationnellePage() {

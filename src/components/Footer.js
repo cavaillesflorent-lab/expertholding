@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Phone, Mail, MapPin } from 'lucide-react'
 
 export default function Footer({ currentPage = 'accueil' }) {
   const navItems = [
@@ -7,6 +8,7 @@ export default function Footer({ currentPage = 'accueil' }) {
     { name: 'Gérer sa Holding', href: '/gerer-holding', key: 'gerer' },
     { name: 'Transmettre sa Holding', href: '/transmettre-holding', key: 'transmettre' },
     { name: 'Expertise', href: '/expertise', key: 'expertise' },
+    { name: 'Légal', href: '/legal', key: 'legal' },
     { name: 'Contact', href: '/contact', key: 'contact' }
   ]
 
@@ -30,7 +32,10 @@ export default function Footer({ currentPage = 'accueil' }) {
             <div className="space-y-2 text-sm text-slate-600 font-light">
               <p>Florent Cavailles - Ingénieur Patrimonial</p>
               <p>Occitea Patrimoine</p>
-              <p>504 route des Gaux, 81290 Labruguière</p>
+              <div className="flex items-start space-x-2 mt-2">
+                <MapPin className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
+                <p>504 route des Gaux, 81290 Labruguière</p>
+              </div>
             </div>
           </div>
 
@@ -96,28 +101,34 @@ export default function Footer({ currentPage = 'accueil' }) {
             <h3 className="text-sm font-light text-slate-900 mb-4 uppercase tracking-wide">
               Contact
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               <li>
-                <a href="tel:0607963135"
-                  className="text-slate-600 hover:text-amber-600 font-light transition-colors"
+                <a 
+                  href="tel:0607963135"
+                  className="flex items-center space-x-2 text-slate-600 hover:text-amber-600 font-light transition-colors group"
                 >
-                  06 07 96 31 35
+                  <Phone className="w-4 h-4 text-slate-400 group-hover:text-amber-600" />
+                  <span className="font-medium">06 07 96 31 35</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:florent@occitea-ip.fr"
-                  className="text-slate-600 hover:text-amber-600 font-light transition-colors"
+                <a 
+                  href="mailto:florent@occitea-ip.fr"
+                  className="flex items-center space-x-2 text-slate-600 hover:text-amber-600 font-light transition-colors group"
                 >
-                  florent@occitea-ip.fr
+                  <Mail className="w-4 h-4 text-slate-400 group-hover:text-amber-600" />
+                  <span>florent@occitea-ip.fr</span>
                 </a>
               </li>
-              <li className="mt-4">
-                <Link
-                  href="/contact"
+              <li className="mt-4 pt-2">
+                <a
+                  href="https://taap.it/i3gsEr"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block px-4 py-2 bg-amber-500 text-white text-sm rounded hover:bg-amber-600 transition"
                 >
                   Prendre rendez-vous
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

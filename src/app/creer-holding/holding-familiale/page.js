@@ -1,3 +1,5 @@
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { ChevronRight, CheckCircle, AlertTriangle, Users, Heart, Shield, TrendingUp, Home, Gift, Scale } from 'lucide-react'
 
 export default function HoldingFamilialePage() {
