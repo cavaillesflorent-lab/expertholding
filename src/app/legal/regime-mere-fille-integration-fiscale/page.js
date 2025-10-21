@@ -124,13 +124,13 @@ export default function RegimeMereFilleIntegrationPage() {
 
             {/* Référence BOFiP */}
             <a 
-              href="https://bofip.impots.gouv.fr/bofip/1774-PGP.html/identifiant=BOI-IS-BASE-10-10-10-10-20120912" 
+              href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006199175/#LEGISCTA000006199175" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition shadow-md"
             >
               <ExternalLink className="w-5 h-5" />
-              <span className="font-light">Consulter BOI-IS-BASE-10-10-10-10</span>
+              <span className="font-light">Consulter article 145 du CGI</span>
             </a>
           </div>
 
@@ -241,13 +241,13 @@ export default function RegimeMereFilleIntegrationPage() {
 
             {/* Référence BOFiP */}
             <a 
-              href="https://bofip.impots.gouv.fr/bofip/1775-PGP.html/identifiant=BOI-IS-BASE-10-10-10-20-20120912" 
+              href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042159298/2020-07-25" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-amber-600 text-white px-6 py-3 rounded-lg hover:bg-amber-700 transition shadow-md"
             >
               <ExternalLink className="w-5 h-5" />
-              <span className="font-light">Consulter BOI-IS-BASE-10-10-10-20</span>
+              <span className="font-light">Consulter article 216 du CGI</span>
             </a>
           </div>
 
@@ -342,13 +342,13 @@ export default function RegimeMereFilleIntegrationPage() {
 
             {/* Référence BOFiP */}
             <a 
-              href="https://bofip.impots.gouv.fr/bofip/2228-PGP.html/identifiant=BOI-IS-GPE-10-20-10-20120912" 
+              href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034387974" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition shadow-md"
             >
               <ExternalLink className="w-5 h-5" />
-              <span className="font-light">Consulter BOI-IS-GPE-10-20-10</span>
+              <span className="font-light">Consulter article 223 du CGI</span>
             </a>
           </div>
 

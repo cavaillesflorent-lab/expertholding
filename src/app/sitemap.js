@@ -97,7 +97,7 @@ export default function sitemap() {
       changeFrequency: 'monthly'
     },
     {
-      route: '/legal/report-imposition-150-0-b-ter',
+      route: '/legal/report-imposition-1500BTER',  // ✅ CORRIGÉ ICI
       priority: 0.8,
       changeFrequency: 'monthly'
     },

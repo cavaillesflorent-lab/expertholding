@@ -5,7 +5,7 @@ import { ChevronRight, CheckCircle, AlertTriangle, TrendingUp, Shield, FileText,
 export default function HoldingPurePage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Note: Ajoutez <Header currentPage="creer" /> ici */}
+      <Header currentPage="creer" />
 
       {/* Hero avec image */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
@@ -527,7 +527,7 @@ export default function HoldingPurePage() {
         </div>
       </section>
 
-      {/* Note: Ajoutez <Footer currentPage="creer" /> ici */}
+      <Footer currentPage="creer" />
     </div>
   )
 }

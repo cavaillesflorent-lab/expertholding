@@ -163,13 +163,13 @@ export default function ReportImposition150BterPage() {
           {/* Références BOFiP */}
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="https://bofip.impots.gouv.fr/bofip/4765-PGP.html/identifiant=BOI-RPPM-PVBMI-30-10-60-20-20120912" 
+              href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048806695" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex-1 inline-flex items-center justify-center space-x-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition shadow-md"
             >
               <ExternalLink className="w-5 h-5" />
-              <span className="font-light">BOI-RPPM-PVBMI-30-10-60-20</span>
+              <span className="font-light"> Article 150-0-B Ter du CGI</span>
             </a>
             <a 
               href="https://bofip.impots.gouv.fr/bofip/4767-PGP.html/identifiant=BOI-RPPM-PVBMI-30-10-60-40-20120912" 

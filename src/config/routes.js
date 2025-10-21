@@ -41,25 +41,25 @@ export const routes = {
       href: '/contact/'
     }
   ],
-  
+
   creerSubmenu: [
     {
       id: 'holding-pure',
       label: 'Holding Pure',
       href: '/creer-holding/holding-pure/',
-      description: 'Détention passive de participations'
+      description: 'Holding passive dédiée à la gestion de participations'
     },
     {
       id: 'holding-operationnelle',
       label: 'Holding Opérationnelle',
       href: '/creer-holding/holding-operationnelle/',
-      description: 'Animation active de filiales'
+      description: 'Holding active avec activité propre'
     },
     {
       id: 'holding-familiale',
       label: 'Holding Familiale',
       href: '/creer-holding/holding-familiale/',
-      description: 'Structuration patrimoniale familiale'
+      description: 'Structurer et transmettre votre patrimoine'
     },
     {
       id: 'apport-cession',
@@ -94,17 +94,17 @@ export const routes = {
     {
       id: 'regime-mere-fille',
       label: 'Régime mère-fille et intégration fiscale',
-      href: '/legal/regime-mere-fille-integration-fiscale/',
-      description: 'Articles 145, 216 et 223 A du CGI'
+      description: 'Articles 145, 216 et 223 A du CGI',
+      href: '/legal/regime-mere-fille-integration-fiscale/'
     },
     {
       id: 'report-imposition',
       label: 'Report d\'imposition',
-      href: '/legal/report-imposition-150-0-b-ter/',
-      description: 'Article 150-0 B ter du CGI'
+      description: 'Article 150-0 B ter du CGI',
+      href: '/legal/report-imposition-1500BTER/'  // ✅ CORRIGÉ ICI
     }
   ],
-  
+
   solutions: [
     { 
       id: 'assurance-vie-lux',
