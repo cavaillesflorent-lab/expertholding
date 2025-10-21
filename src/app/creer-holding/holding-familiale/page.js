@@ -311,7 +311,7 @@ export default function HoldingFamilialePage() {
             Accompagnement complet : pactes familiaux, Pacte Dutreil, gouvernance intergénérationnelle
           </p>
           <a 
-            href="mailto:florent@occitea-ip.fr" 
+            href="https://taap.it/i3gsEr" 
             className="inline-block bg-white hover:bg-slate-50 text-blue-600 px-8 py-4 text-base font-light transition-all"
           >
             Prendre rendez-vous
@@ -596,7 +596,7 @@ export default function HoldingFamilialePage() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:florent@occitea-ip.fr" 
+              href="https://taap.it/i3gsEr" 
               className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-base font-light transition-all hover:shadow-xl"
             >
               Démarrer mon projet

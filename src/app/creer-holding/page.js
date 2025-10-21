@@ -335,7 +335,7 @@ export default function CreerHoldingPage() {
             Échangeons sur votre projet de création de holding
           </p>
           <a 
-            href="mailto:florent@occitea-ip.fr" 
+            href="https://taap.it/i3gsEr" 
             className="inline-block bg-white hover:bg-slate-50 text-amber-600 px-8 py-4 text-base font-light transition-all"
           >
             Prendre rendez-vous
@@ -565,7 +565,7 @@ export default function CreerHoldingPage() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:florent@occitea-ip.fr" 
+              href="https://taap.it/i3gsEr" 
               className="inline-flex items-center justify-center bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-base font-light transition-all hover:shadow-xl"
             >
               Prendre rendez-vous
