@@ -8,6 +8,7 @@ export default function Header({ currentPage = 'accueil' }) {
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false)
   const [mobileCreerOpen, setMobileCreerOpen] = useState(false)
   const [mobileGererOpen, setMobileGererOpen] = useState(false)
+  const [mobileLegalOpen, setMobileLegalOpen] = useState(false)
 
   return (
     <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
@@ -118,6 +119,38 @@ export default function Header({ currentPage = 'accueil' }) {
                   </div>
                 )
               }
+
+              // Menu "Légal" avec HOVER
+              if (item.id === 'legal' && item.hasSubmenu) {
+                return (
+                  <div key={item.id} className="relative group">
+                    <button
+                      className={`font-medium transition flex items-center ${
+                        currentPage === item.id ? 'text-amber-600' : 'text-slate-600 hover:text-amber-600'
+                      }`}
+                    >
+                      {item.label}
+                      <ChevronDown className="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" />
+                    </button>
+                    
+                    <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-slate-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                      <div className="px-4 py-2 border-b border-slate-200">
+                        <p className="text-xs font-bold text-slate-500 uppercase tracking-wide">Références juridiques CGI</p>
+                      </div>
+                      <a href={item.href} className="block px-4 py-3 text-sm text-slate-700 hover:bg-amber-50 hover:text-amber-600 transition-colors border-b border-slate-100">
+                        <strong>Cadre Légal des Holdings</strong>
+                        <p className="text-xs text-slate-500 mt-1">Vue d'ensemble des textes applicables</p>
+                      </a>
+                      {routes.legalSubmenu.map((subItem) => (
+                        <a key={subItem.id} href={subItem.href} className="block px-4 py-3 text-sm text-slate-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+                          <strong>{subItem.label}</strong>
+                          <p className="text-xs text-slate-500 mt-1">{subItem.description}</p>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )
+              }
               
               // Liens simples
               return (
@@ -210,6 +243,31 @@ export default function Header({ currentPage = 'accueil' }) {
                           {routes.solutions.map((solution) => (
                             <a key={solution.id} href={solution.href} className="block text-sm text-slate-600 hover:text-amber-600 transition py-1" onClick={() => setMobileMenuOpen(false)}>
                               {solution.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )
+                }
+
+                // Menu "Légal" mobile
+                if (item.id === 'legal' && item.hasSubmenu) {
+                  return (
+                    <div key={item.id}>
+                      <div className="flex items-center justify-between">
+                        <a href={item.href} className={`font-medium transition ${currentPage === item.id ? 'text-amber-600' : 'text-slate-600 hover:text-amber-600'}`} onClick={() => setMobileMenuOpen(false)}>
+                          {item.label}
+                        </a>
+                        <button onClick={() => setMobileLegalOpen(!mobileLegalOpen)} className="p-2 text-slate-600 hover:text-amber-600">
+                          <ChevronDown className={`w-4 h-4 transition-transform ${mobileLegalOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                      </div>
+                      {mobileLegalOpen && (
+                        <div className="mt-2 ml-4 space-y-2 pl-4 border-l-2 border-amber-200">
+                          {routes.legalSubmenu.map((subItem) => (
+                            <a key={subItem.id} href={subItem.href} className="block text-sm text-slate-600 hover:text-amber-600 transition py-1" onClick={() => setMobileMenuOpen(false)}>
+                              {subItem.label}
                             </a>
                           ))}
                         </div>
