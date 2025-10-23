@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
+import { routes } from '@/config/routes'
 import { Plus, Edit, Trash2, Eye, EyeOff, Calendar, Search } from 'lucide-react'
 import toast from 'react-hot-toast'
 
@@ -21,7 +22,7 @@ export default function DashboardPage() {
   async function checkAuth() {
     const { data: { session } } = await supabase.auth.getSession()
     if (!session) {
-      router.push('/admin/login')
+      router.push(routes.admin.login)
     }
   }
 
@@ -123,7 +124,7 @@ export default function DashboardPage() {
             <p className="text-gray-600 mt-1">Gérez vos articles de blog</p>
           </div>
           <button
-            onClick={() => router.push('/admin/articles/new')}
+            onClick={() => router.push(routes.admin.articlesNew)}
             className="flex items-center bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
           >
             <Plus className="w-5 h-5 mr-2" />
@@ -313,7 +314,7 @@ export default function DashboardPage() {
                           {article.published ? <EyeOff size={18} /> : <Eye size={18} />}
                         </button>
                         <button
-                          onClick={() => router.push(`/admin/articles/${article.id}/edit`)}
+                          onClick={() => router.push(routes.admin.articlesEdit(article.id))}
                           className="p-2 hover:bg-blue-50 text-blue-600 rounded-lg transition-colors"
                           title="Modifier"
                         >
