@@ -38,6 +38,12 @@ export const metadata = {
     images: ['https://expertholding.fr/og-image.jpg'],
   },
   manifest: '/site.webmanifest',
+  // 👇 BALISE BING WEBMASTER TOOLS AJOUTÉE ICI
+  verification: {
+    other: {
+      'msvalidate.01': 'A67D7CC5AA5CF28EF0DAE0B54E38B4EE',
+    },
+  },
 }
 
 export default function RootLayout({ children }) {
