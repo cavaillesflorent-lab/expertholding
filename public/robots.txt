@@ -1,5 +1,163 @@
+# ============================================
+# ROBOTS.TXT OPTIMISÉ POUR TOUS LES MOTEURS IA
+# Dernière mise à jour : Octobre 2025
+# ============================================
+
+# ==========================================
+# OPENAI - ChatGPT Search & GPT
+# ==========================================
+# Indexation ChatGPT Search (PRIORITAIRE pour visibilité)
+User-agent: OAI-SearchBot
+Allow: /
+
+# Requêtes utilisateurs en temps réel (citations)
+User-agent: ChatGPT-User
+User-agent: ChatGPT-User/2.0
+Allow: /
+
+# Entraînement des modèles GPT (BLOQUÉ - protège votre contenu)
+User-agent: GPTBot
+Disallow: /
+
+# ==========================================
+# ANTHROPIC - Claude (MOI !)
+# ==========================================
+# Recherche et citations Claude (PRIORITAIRE)
+User-agent: Claude-SearchBot
+Allow: /
+
+# Requêtes utilisateurs Claude
+User-agent: Claude-User
+Allow: /
+
+# Crawl web Claude
+User-agent: Claude-Web
+Allow: /
+
+# Entraînement modèles Claude (BLOQUÉ - protège votre contenu)
+User-agent: ClaudeBot
+Disallow: /
+
+# Ancien crawler (déprécié mais laissé par précaution)
+User-agent: anthropic-ai
+Disallow: /
+
+# ==========================================
+# MISTRAL AI - Le Chat
+# ==========================================
+# Requêtes utilisateurs Le Chat (recherche en temps réel)
+User-agent: MistralAI-User
+User-agent: MistralAI-User/1.0
+Allow: /
+
+# ==========================================
+# GOOGLE - Gemini & Bard
+# ==========================================
+# Gemini standard
+User-agent: Googlebot
+Allow: /
+
+# Gemini Deep Research
+User-agent: Gemini-Deep-Research
+Allow: /
+
+# Google Vertex AI
+User-agent: Google-CloudVertexBot
+User-agent: CloudVertexBot
+Allow: /
+
+# Entraînement IA Google (BLOQUÉ - protège votre contenu)
+User-agent: Google-Extended
+Disallow: /
+
+# ==========================================
+# MICROSOFT - Bing & Copilot (CRITIQUE)
+# ==========================================
+# Bing (utilisé par ChatGPT Search)
+User-agent: Bingbot
+Allow: /
+
+# Bing Preview (Copilot)
+User-agent: bingpreview
+Allow: /
+
+# ==========================================
+# PERPLEXITY AI
+# ==========================================
+# Indexation Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Requêtes utilisateurs (ne respecte PAS robots.txt mais déclaré)
+User-agent: Perplexity-User
+User-agent: Perplexity-User/1.0
+Allow: /
+
+# ==========================================
+# META - Llama
+# ==========================================
+# Crawlers Meta pour IA
+User-agent: FacebookBot
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# ==========================================
+# APPLE - Apple Intelligence
+# ==========================================
+# Apple standard
+User-agent: Applebot
+Allow: /
+
+# Entraînement Apple Intelligence (BLOQUÉ - protège votre contenu)
+User-agent: Applebot-Extended
+Disallow: /
+
+# ==========================================
+# AUTRES IA ÉMERGENTES
+# ==========================================
+# Amazon Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# ByteDance (TikTok) - Entraînement (BLOQUÉ)
+User-agent: Bytespider
+Disallow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# DuckDuckGo Assistant
+User-agent: DuckAssistBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# ==========================================
+# CRAWLERS TRADITIONNELS (AUTORISER)
+# ==========================================
 User-agent: *
 Allow: /
 Disallow: /admin/
 
+# ==========================================
+# SITEMAPS
+# ==========================================
 Sitemap: https://expertholding.fr/sitemap.xml
+
+# ==========================================
+# NOTES IMPORTANTES
+# ==========================================
+# ✅ AUTORISÉ (Allow) = Visibilité dans les recherches IA
+# ❌ BLOQUÉ (Disallow) = Protection contre entraînement modèles
+# 
+# Délai d'indexation : 24-72h après modification
+# Vérifiez : https://expertholding.fr/robots.txt
+# ==========================================
