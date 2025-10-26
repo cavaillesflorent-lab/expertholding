@@ -101,7 +101,68 @@ export const routes = {
       id: 'report-imposition',
       label: 'Report d\'imposition',
       description: 'Article 150-0 B ter du CGI',
-      href: '/legal/report-imposition-1500BTER/'  // ✅ CORRIGÉ ICI
+      href: '/legal/report-imposition-1500BTER/'
+    }
+  ],
+
+  // Pages villes (SEO local) ✅ AJOUTÉ
+  villes: [
+    {
+      id: 'toulouse',
+      slug: 'Toulouse',
+      label: 'Toulouse',
+      region: 'Occitanie',
+      href: '/villes/Toulouse/',
+      description: 'Expert holding aéronautique, spatial, biotech à Toulouse',
+      title: 'Création de Holding à Toulouse | Expert Aéronautique & Biotech',
+      metaDescription: 'Expert holding à Toulouse. Structuration holdings pour dirigeants PME aéronautique, biotech et IA. Régime mère-fille, optimisation fiscale, transmission.',
+      keywords: [
+        'holding toulouse',
+        'création holding toulouse',
+        'expert holding toulouse',
+        'holding aéronautique toulouse',
+        'holding biotech toulouse'
+      ],
+      sectors: ['Aéronautique', 'Spatial', 'Biotech', 'IA']
+    },
+    {
+      id: 'paris',
+      slug: 'Paris',
+      label: 'Paris',
+      region: 'Île-de-France',
+      href: '/villes/Paris/',
+      description: 'Expert holding groupes, investisseurs, luxe, fintech à Paris',
+      title: 'Création de Holding à Paris | Expert Groupes & Investisseurs',
+      metaDescription: 'Expert holding à Paris. Structuration holdings pour dirigeants de groupes, investisseurs, luxe, fintech et industrie. Régime mère-fille, optimisation fiscale.',
+      keywords: [
+        'holding paris',
+        'création holding paris',
+        'expert holding paris',
+        'holding investissement paris',
+        'holding luxe paris',
+        'holding fintech paris'
+      ],
+      sectors: ['Finance', 'Luxe', 'Fintech', 'IA', 'Industrie']
+    },
+    {
+      id: 'lyon',
+      slug: 'Lyon',
+      label: 'Lyon',
+      region: 'Auvergne-Rhône-Alpes',
+      href: '/villes/Lyon/',
+      description: 'Expert holding chimie, pharma, biotech à Lyon',
+      title: 'Création de Holding à Lyon | Expert Chimie, Pharma & Biotech',
+      metaDescription: 'Expert holding à Lyon. Structuration holdings pour dirigeants PME chimie, pharma, biotech. Vallée de la Chimie, Lyonbiopôle. Régime mère-fille, optimisation fiscale.',
+      keywords: [
+        'holding lyon',
+        'création holding lyon',
+        'expert holding lyon',
+        'holding chimie lyon',
+        'holding pharma lyon',
+        'vallée de la chimie',
+        'lyonbiopôle'
+      ],
+      sectors: ['Chimie', 'Pharma', 'Biotech', 'Métallurgie']
     }
   ],
 
@@ -160,4 +221,29 @@ export const routes = {
   social: {
     forbes: 'https://www.forbes.fr/mediasfrance/occitea-patrimoine/'
   }
+}
+
+// Helper functions pour les villes ✅ AJOUTÉ
+export const getVilleBySlug = (slug) => {
+  return routes.villes.find(v => v.slug.toLowerCase() === slug.toLowerCase())
+}
+
+export const getVilleById = (id) => {
+  return routes.villes.find(v => v.id === id)
+}
+
+export const getAllVilles = () => {
+  return routes.villes
+}
+
+export const getVillesByRegion = (region) => {
+  return routes.villes.filter(v => v.region === region)
+}
+
+export const getVillesNavLinks = () => {
+  return routes.villes.map(ville => ({
+    label: ville.label,
+    href: ville.href,
+    region: ville.region
+  }))
 }

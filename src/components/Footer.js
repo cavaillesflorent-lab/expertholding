@@ -1,7 +1,11 @@
+'use client'
+import { useState } from 'react'
 import Link from 'next/link'
-import { Phone, Mail, MapPin } from 'lucide-react'
+import { Phone, Mail, MapPin, ChevronDown } from 'lucide-react'
 
 export default function Footer({ currentPage = 'accueil' }) {
+  const [villesOpen, setVillesOpen] = useState(false)
+
   const navItems = [
     { name: 'Accueil', href: '/', key: 'accueil' },
     { name: 'Créer sa Holding', href: '/creer-holding', key: 'creer' },
@@ -10,6 +14,12 @@ export default function Footer({ currentPage = 'accueil' }) {
     { name: 'Expertise', href: '/expertise', key: 'expertise' },
     { name: 'Légal', href: '/legal', key: 'legal' },
     { name: 'Contact', href: '/contact', key: 'contact' }
+  ]
+
+  const villes = [
+    { name: 'Toulouse', href: '/villes/Toulouse', key: 'toulouse', region: 'Occitanie' },
+    { name: 'Paris', href: '/villes/Paris', key: 'paris', region: 'Île-de-France' },
+    { name: 'Lyon', href: '/villes/Lyon', key: 'lyon', region: 'Auvergne-Rhône-Alpes' }
   ]
 
   const ressources = [
@@ -62,7 +72,7 @@ export default function Footer({ currentPage = 'accueil' }) {
             </ul>
           </div>
 
-          {/* Ressources */}
+          {/* Ressources + Villes */}
           <div>
             <h3 className="text-sm font-light text-slate-900 mb-4 uppercase tracking-wide">
               Ressources
@@ -93,6 +103,34 @@ export default function Footer({ currentPage = 'accueil' }) {
                   )}
                 </li>
               ))}
+
+              {/* Menu déroulant Villes */}
+              <li className="relative">
+                <button
+                  onClick={() => setVillesOpen(!villesOpen)}
+                  className="flex items-center justify-between w-full text-slate-600 hover:text-amber-600 font-light transition-colors group"
+                >
+                  <span>Nos villes d'intervention</span>
+                  <ChevronDown 
+                    className={`w-4 h-4 transition-transform ${villesOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                
+                {villesOpen && (
+                  <div className="mt-2 ml-3 pl-3 border-l border-slate-200 space-y-2">
+                    {villes.map((ville) => (
+                      <Link
+                        key={ville.key}
+                        href={ville.href}
+                        className="block text-sm text-slate-600 hover:text-amber-600 font-light transition-colors"
+                      >
+                        <span className="font-medium">{ville.name}</span>
+                        <span className="text-xs text-slate-400 ml-2">({ville.region})</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </li>
             </ul>
           </div>
 

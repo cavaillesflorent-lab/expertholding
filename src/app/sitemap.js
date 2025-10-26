@@ -46,6 +46,23 @@ export default function sitemap() {
       changeFrequency: 'weekly'
     },
     
+    // Pages villes (SEO local) ✅ AJOUTÉ
+    {
+      route: '/villes/Toulouse',
+      priority: 0.9,
+      changeFrequency: 'monthly'
+    },
+    {
+      route: '/villes/Paris',
+      priority: 0.9,
+      changeFrequency: 'monthly'
+    },
+    {
+      route: '/villes/Lyon',
+      priority: 0.9,
+      changeFrequency: 'monthly'
+    },
+    
     // Section Créer - Sous-pages
     {
       route: '/creer-holding/holding-pure',
@@ -97,7 +114,7 @@ export default function sitemap() {
       changeFrequency: 'monthly'
     },
     {
-      route: '/legal/report-imposition-1500BTER',  // ✅ CORRIGÉ ICI
+      route: '/legal/report-imposition-1500BTER',
       priority: 0.8,
       changeFrequency: 'monthly'
     },
