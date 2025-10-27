@@ -46,7 +46,7 @@ export default function sitemap() {
       changeFrequency: 'weekly'
     },
     
-    // Pages villes (SEO local) ✅ AJOUTÉ
+    // Pages villes (SEO local) ✅ MIS À JOUR - 5 VILLES
     {
       route: '/villes/Toulouse',
       priority: 0.9,
@@ -59,6 +59,16 @@ export default function sitemap() {
     },
     {
       route: '/villes/Lyon',
+      priority: 0.9,
+      changeFrequency: 'monthly'
+    },
+    {
+      route: '/villes/Marseille',
+      priority: 0.9,
+      changeFrequency: 'monthly'
+    },
+    {
+      route: '/villes/Bordeaux',
       priority: 0.9,
       changeFrequency: 'monthly'
     },

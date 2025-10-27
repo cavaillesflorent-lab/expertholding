@@ -19,7 +19,9 @@ export default function Footer({ currentPage = 'accueil' }) {
   const villes = [
     { name: 'Toulouse', href: '/villes/Toulouse', key: 'toulouse', region: 'Occitanie' },
     { name: 'Paris', href: '/villes/Paris', key: 'paris', region: 'Île-de-France' },
-    { name: 'Lyon', href: '/villes/Lyon', key: 'lyon', region: 'Auvergne-Rhône-Alpes' }
+    { name: 'Lyon', href: '/villes/Lyon', key: 'lyon', region: 'Auvergne-Rhône-Alpes' },
+    { name: 'Marseille', href: '/villes/Marseille', key: 'marseille', region: 'Provence-Alpes-Côte d\'Azur' },
+    { name: 'Bordeaux', href: '/villes/Bordeaux', key: 'bordeaux', region: 'Nouvelle-Aquitaine' }
   ]
 
   const ressources = [

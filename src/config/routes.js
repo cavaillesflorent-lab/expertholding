@@ -105,7 +105,7 @@ export const routes = {
     }
   ],
 
-  // Pages villes (SEO local) ✅ AJOUTÉ
+  // Pages villes (SEO local) ✅ MIS À JOUR - 5 VILLES
   villes: [
     {
       id: 'toulouse',
@@ -163,6 +163,50 @@ export const routes = {
         'lyonbiopôle'
       ],
       sectors: ['Chimie', 'Pharma', 'Biotech', 'Métallurgie']
+    },
+    {
+      id: 'marseille',
+      slug: 'Marseille',
+      label: 'Marseille',
+      region: 'Provence-Alpes-Côte d\'Azur',
+      href: '/villes/Marseille/',
+      description: 'Expert holding maritime, portuaire, logistique à Marseille',
+      title: 'Création de Holding à Marseille | Expert Maritime & Logistique',
+      metaDescription: 'Expert holding à Marseille. Structuration holdings pour dirigeants PME maritimes, portuaires, logistiques et transition énergétique. Port Marseille-Fos, Zone Fos.',
+      keywords: [
+        'holding marseille',
+        'création holding marseille',
+        'expert holding marseille',
+        'holding maritime marseille',
+        'holding portuaire marseille',
+        'holding logistique marseille',
+        'port marseille fos',
+        'zone industrialo-portuaire fos'
+      ],
+      sectors: ['Maritime', 'Portuaire', 'Logistique', 'Transition énergétique']
+    },
+    {
+      id: 'bordeaux',
+      slug: 'Bordeaux',
+      label: 'Bordeaux',
+      region: 'Nouvelle-Aquitaine',
+      href: '/villes/Bordeaux/',
+      description: 'Expert holding vin, aéronautique, biotech à Bordeaux',
+      title: 'Création de Holding à Bordeaux | Expert Vin & Aéronautique',
+      metaDescription: 'Expert holding à Bordeaux. Structuration holdings pour propriétaires domaines viticoles et dirigeants groupes aéronautique, santé, numérique. Pacte Dutreil.',
+      keywords: [
+        'holding bordeaux',
+        'création holding bordeaux',
+        'expert holding bordeaux',
+        'holding viticole bordeaux',
+        'holding vin bordeaux',
+        'domaine viticole holding',
+        'pacte dutreil bordeaux',
+        'holding aéronautique bordeaux',
+        'holding biotech bordeaux',
+        'transmission domaine viticole'
+      ],
+      sectors: ['Vin', 'Aéronautique', 'Santé', 'Numérique', 'Biotech']
     }
   ],
 
@@ -223,7 +267,7 @@ export const routes = {
   }
 }
 
-// Helper functions pour les villes ✅ AJOUTÉ
+// Helper functions pour les villes ✅
 export const getVilleBySlug = (slug) => {
   return routes.villes.find(v => v.slug.toLowerCase() === slug.toLowerCase())
 }
