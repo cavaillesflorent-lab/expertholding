@@ -160,7 +160,7 @@ export default function ReportImposition150BterPage() {
             </p>
           </div>
 
-          {/* Références BOFiP */}
+          {/* Références Legifrance */}
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048806695" 
@@ -171,15 +171,7 @@ export default function ReportImposition150BterPage() {
               <ExternalLink className="w-5 h-5" />
               <span className="font-light"> Article 150-0-B Ter du CGI</span>
             </a>
-            <a 
-              href="https://bofip.impots.gouv.fr/bofip/4767-PGP.html/identifiant=BOI-RPPM-PVBMI-30-10-60-40-20120912" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center space-x-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition shadow-md"
-            >
-              <ExternalLink className="w-5 h-5" />
-              <span className="font-light">BOI-RPPM-PVBMI-30-10-60-40</span>
-            </a>
+            
           </div>
         </div>
       </section>
@@ -602,29 +594,21 @@ export default function ReportImposition150BterPage() {
               <div className="flex-1">
                 <h3 className="font-light text-xl text-slate-900 mb-3">Pour approfondir</h3>
                 <p className="text-slate-600 font-light leading-relaxed mb-4">
-                  Consultez les références officielles du BOFiP pour une analyse détaillée de l'article 150-0 B ter du CGI et de ses modalités d'application :
+                  Consultez les références officielles du Législateur pour une analyse détaillée de l'article 150-0 B ter du CGI et de ses modalités d'application :
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href="https://bofip.impots.gouv.fr/bofip/4765-PGP.html/identifiant=BOI-RPPM-PVBMI-30-10-60-20-20120912" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center space-x-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition shadow-md"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                    <span className="font-light">BOI-RPPM-PVBMI-30-10-60-20</span>
-                  </a>
-                  <a 
-                    href="https://bofip.impots.gouv.fr/bofip/4767-PGP.html/identifiant=BOI-RPPM-PVBMI-30-10-60-40-20120912" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center space-x-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition shadow-md"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                    <span className="font-light">BOI-RPPM-PVBMI-30-10-60-40</span>
-                  </a>
-                </div>
+            <a 
+              href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048806695" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex items-center justify-center space-x-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition shadow-md"
+            >
+              <ExternalLink className="w-5 h-5" />
+              <span className="font-light"> Article 150-0-B Ter du CGI</span>
+            </a>
+            
+          </div>
               </div>
             </div>
           </div>

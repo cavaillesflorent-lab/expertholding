@@ -21,6 +21,15 @@ export default function LegalPage() {
       href: '/legal/report-imposition-150-0-b-ter/',
       icon: TrendingUp,
       color: 'indigo'
+    },
+    {
+      id: 'pacte-dutreil',
+      title: 'Pacte Dutreil - Article 787 B du CGI',
+      description: 'Exonération de 75 % des droits de mutation à titre gratuit pour la transmission d\'entreprises familiales sous conditions d\'engagement de conservation et de gestion.',
+      articles: ['Article 787 B du CGI'],
+      href: '/legal/pacte-dutreil-article-787-b/',
+      icon: Shield,
+      color: 'blue'
     }
   ]
 
@@ -106,7 +115,7 @@ export default function LegalPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {legalArticles.map((article) => {
               const IconComponent = article.icon
               const colorClasses = {
@@ -123,6 +132,13 @@ export default function LegalPage() {
                   iconBg: 'bg-indigo-100',
                   iconText: 'text-indigo-700',
                   button: 'bg-indigo-600 hover:bg-indigo-700'
+                },
+                blue: {
+                  bg: 'bg-blue-50',
+                  border: 'border-blue-200',
+                  iconBg: 'bg-blue-100',
+                  iconText: 'text-blue-700',
+                  button: 'bg-blue-600 hover:bg-blue-700'
                 }
               }
               const colors = colorClasses[article.color]
