@@ -27,7 +27,7 @@ export default function LegalPage() {
       title: 'Pacte Dutreil - Article 787 B du CGI',
       description: 'Exonération de 75 % des droits de mutation à titre gratuit pour la transmission d\'entreprises familiales sous conditions d\'engagement de conservation et de gestion.',
       articles: ['Article 787 B du CGI'],
-      href: '/legal/pacte-dutreil-article-787-b/',
+      href: '/legal/pacte-dutreil/',
       icon: Shield,
       color: 'blue'
     }

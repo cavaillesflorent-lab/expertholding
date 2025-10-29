@@ -102,6 +102,12 @@ export const routes = {
       label: 'Report d\'imposition',
       description: 'Article 150-0 B ter du CGI',
       href: '/legal/report-imposition-1500BTER/'
+    },
+    {
+      id: 'pacte-dutreil',
+      label: 'Pacte Dutreil',
+      description: 'Article 787 B du CGI',
+      href: '/legal/pacte-dutreil/'
     }
   ],
 
