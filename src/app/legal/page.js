@@ -18,7 +18,7 @@ export default function LegalPage() {
       title: 'Report d\'imposition',
       description: 'Mécanisme de report obligatoire pour les plus-values réalisées lors de l\'apport de titres à une société contrôlée par l\'apporteur.',
       articles: ['Article 150-0 B ter du CGI'],
-      href: '/legal/report-imposition-150-0-b-ter/',
+      href: '/legal/report-imposition-1500BTER/',
       icon: TrendingUp,
       color: 'indigo'
     },
